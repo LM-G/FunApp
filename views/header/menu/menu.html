@@ -12,5 +12,10 @@
         	<a ui-sref="home.partial1">Partial1</a>
         </li>
     </ul>
+    <ul class="nav navbar-nav navbar-right">
+        <li ng-class="{'active': menu.state.current.name == 'about'}">
+        	<a ui-sref="about">About</a>
+        </li>
+      </ul>
   </div><!-- /.container-fluid -->
 </nav>
