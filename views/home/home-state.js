@@ -1,0 +1,29 @@
+/**
+ * Chargement des directives et états du menu
+ */
+(function() {
+	'use strict';
+	angular.module('funApp.views.home')
+		.constant('homeConfig', {
+			nom : "home",
+			type : "view",
+			config : {
+		        url: "/home",
+		        templateUrl: "/views/home/home.html",
+		        controller: "homeCtrl",
+		        controllerAs: "home"
+	    	}
+	    })
+		.config([
+			'$stateProvider',
+			'homeConfig',
+			configuration
+		]);
+
+	function configuration($stateProvider, homeConfig) {
+		$stateProvider
+			.state(homeConfig.nom, homeConfig.config);
+
+		console.info("config home charge");
+	}
+})();

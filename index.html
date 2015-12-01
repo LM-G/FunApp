@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr" ng-app="funApp">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Fun Application</title>
+	<base href="/">
+
+	<!-- Bootstrap -->
+    <link href="/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Angular -->
+	<script src="/bower_components/angular/angular.js"></script>
+	<!-- traduction -->
+	<script src="/bower_components/angular-translate/angular-translate.min.js"></script>
+	<script src="/bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.min.js"></script>
+	<script src="/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+	<script src="/bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
+	<script src="/bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+</head>
+<body class="container">
+	<div header-menu></div>
+	<div class="row">
+    	<div class="col-sm-12">
+			<div ui-view></div>
+		</div>
+	</div>
+
+	<!-- chargement des scripts -->
+	<script src="modules.js"></script>
+	<script src="/constantes/funAppStates.js"></script>
+	<script src="/services/popInService.js"></script>
+	<!-- header -->
+	<script src="/views/header/header-module.js"></script>
+	<script src="/views/header/header-state.js"></script>
+	<!-- header : menu -->
+	<script src="/views/header/menu/menu.js"></script>
+	<!-- home -->
+	<script src="/views/home/home-module.js"></script>
+	<script src="/views/home/home-state.js"></script>
+	<script src="/views/home/home.js"></script>
+	<!-- home/partial1 -->
+	<script src="/views/home/partial1/partial1-state.js"></script>
+	<script src="/views/home/partial1/partial1.js"></script>
+	<script src="main.js"></script>
+</body>
+</html>

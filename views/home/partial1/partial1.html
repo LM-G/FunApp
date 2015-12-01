@@ -1,0 +1,27 @@
+<div class="modal-header">
+    <h1 ng-bind=" 'partial1.titre' | translate"></h1>
+</div>
+<div class="modal-body">
+	<h2 ng-bind=" 'partial1.sous_titre' | translate"></h2>
+	<p>
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	</p>
+
+	<p>
+		
+	</p>
+
+	<br>
+	<form id="form1" ng-submit="partial1.save()">
+		<div class="form-group">
+			<label ng-bind=" 'partial1.form1.input1.label' | translate"></label>
+			<input type="text" name="valeur" ng-model="partial1.valeur" required
+				placeholder=" {{ 'partial1.form1.input1.placeholder' | translate }}"
+				class="form-control">
+		</div>
+	</form>
+</div>
+<div class="modal-footer">
+	<input class="btn btn-default" ng-bind="'global.bouton.ok' | translate" type="submit" form="form1"/>
+	<button class="btn btn-default" ng-click="partial1.dismiss()" ng-bind="'global.bouton.ko' | translate" ></button>
+</div>

@@ -1,0 +1,18 @@
+{
+	"global":{
+		"bouton": {
+			"ok":"Valider",
+			"ko":"Annuler"
+		}
+	},
+	"partial1":{
+		"titre":"Vue partial 1",
+		"sous_titre":"Je suis une modale !",
+		"form1" : {
+			"input1":{
+				"label":"Valeur",
+				"placeholder":"Entrez une valeur"
+			}
+		}
+	}
+}
