@@ -8,8 +8,10 @@
 
 	function menuCtrl($state) {
 		var menu = this;
-		/* Variables */
-		menu.state = $state;
+
+		menu.isActive = function(state){
+			return $state.current.name == state;
+		}
 
 		console.log("controller menu charge");
 	}

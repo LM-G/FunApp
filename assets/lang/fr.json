@@ -2,17 +2,26 @@
 	"global":{
 		"bouton": {
 			"ok":"Valider",
-			"ko":"Annuler"
+			"ko":"Annuler",
+			"go_partial1":"Ouvrir partial 1",
+			"go_about":"Aller à About",
+			"go_home":"Aller à Home"
 		}
 	},
-	"partial1":{
-		"titre":"Vue partial 1",
-		"sous_titre":"Je suis une modale !",
-		"form1" : {
-			"input1":{
-				"label":"Valeur",
-				"placeholder":"Entrez une valeur"
+	"home":{
+		"titre":"Ceci est la vue \"Home\"",
+		"partial1":{
+			"titre":"Vue partial 1",
+			"sous_titre":"Je suis une modale !",
+			"form1" : {
+				"input1":{
+					"label":"Valeur",
+					"placeholder":"Entrez une valeur"
+				}
 			}
 		}
+	},
+	"about":{
+		"titre":"Ceci est la vue \"About\""
 	}
 }

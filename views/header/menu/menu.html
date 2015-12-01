@@ -2,18 +2,18 @@
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-      <a class="navbar-brand" href="#" ng-click="menu.test()">Brand</a>
+      <a class="navbar-brand" href="#">FunApp</a>
     </div><!-- /.navbar-header -->
     <ul class="nav navbar-nav">
-        <li ng-class="{'active': menu.state.current.name == 'home'}">
+        <li ng-class="{'active': menu.isActive('home')}">
         	<a ui-sref="home">Home</a>
         </li>
-        <li ng-class="{'active': menu.state.current.name == 'home.partial1'}">
+        <li ng-class="{'active': menu.isActive('home.partial1')}">
         	<a ui-sref="home.partial1">Partial1</a>
         </li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
-        <li ng-class="{'active': menu.state.current.name == 'about'}">
+        <li ng-class="{'active': menu.isActive('about')}">
         	<a ui-sref="about">About</a>
         </li>
       </ul>

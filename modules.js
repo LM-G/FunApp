@@ -10,6 +10,7 @@
 	// Vues
 	angular.module('funApp.views', [
 		'funApp.views.home',
-		'funApp.views.header'
+		'funApp.views.header',
+		'funApp.views.about'
 	]);
 })();

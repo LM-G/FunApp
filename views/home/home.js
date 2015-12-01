@@ -14,5 +14,9 @@
 		home.ouvrirPartial1 = function(){
 			$state.go('home.partial1');
 		}
+
+		home.ouvrirAbout = function(){
+			$state.go('about');
+		}
 	}
 })();
