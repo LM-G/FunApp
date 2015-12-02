@@ -12,7 +12,7 @@
 	/* Controleur de l'état contacts */
 	function detailContactsCtrl($scope, $state, $stateParams, contactsContenu) {
 		var detail = this;
-
+		console.log("coucou");
 		var listeContacts = contactsContenu.getListeContacts();
 
 	    /* Listeners */

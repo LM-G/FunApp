@@ -7,6 +7,9 @@
 			"go_partial1":"Ouvrir partial 1",
 			"go_about":"Aller à About",
 			"go_home":"Aller à Home"
+		},
+		"searchBox" : {
+			"placeholder":"Recherche"
 		}
 	},
 	"home":{

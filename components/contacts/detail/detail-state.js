@@ -18,6 +18,20 @@
 		]);
 
 	function configuration($stateProvider, contactsDetailConfig) {
+		angular.extend(contactsDetailConfig.config, {
+			resolve : {
+				contact : [
+					'$stateParams',
+					'contactsContenu', 
+					function(contactsContenu){
+						var contact = contactsContenu.getContact();
+						if( contact != null){
+							return contact;
+						}
+					}
+				]
+			}
+		})
 		$stateProvider
 			.state(contactsDetailConfig.nom, contactsDetailConfig.config);
 

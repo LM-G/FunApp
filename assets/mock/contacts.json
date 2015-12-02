@@ -1,0 +1,58 @@
+[
+  {
+    "id": 0,
+    "picture": "http://placehold.it/32x32",
+    "age": 29,
+    "name": "Clarice Schultz",
+    "genre": "female",
+    "role": "mage"
+  },
+  {
+    "id": 1,
+    "picture": "http://placehold.it/32x32",
+    "age": 25,
+    "name": "Diann Moses",
+    "genre": "female",
+    "role": "voleur"
+  },
+  {
+    "id": 2,
+    "picture": "http://placehold.it/32x32",
+    "age": 32,
+    "name": "Louise Jacobson",
+    "genre": "female",
+    "role": "archer"
+  },
+  {
+    "id": 3,
+    "picture": "http://placehold.it/32x32",
+    "age": 27,
+    "name": "Delgado Stafford",
+    "genre": "male",
+    "role": "voleur"
+  },
+  {
+    "id": 4,
+    "picture": "http://placehold.it/32x32",
+    "age": 28,
+    "name": "Penny Mccarthy",
+    "genre": "female",
+    "role": "mage"
+  },
+  {
+    "id": 5,
+    "picture": "http://placehold.it/32x32",
+    "age": 38,
+    "name": "Lawson Pearson",
+    "genre": "male",
+    "role": "chevalier"
+  },
+  {
+    "id": 6,
+    "picture": "http://placehold.it/32x32",
+    "age": 35,
+    "name": "Glenna Cortez",
+    "genre": "female",
+    "role": "voleur"
+  }
+]

@@ -1,0 +1,20 @@
+http://www.json-generator.com/
+
+
+Contacts :
+
+[
+  '{{repeat(5, 7)}}',
+  {
+    id: '{{index()}}',
+    _id: '{{objectId()}}',
+    picture: 'http://placehold.it/32x32',
+    age: '{{integer(25, 40)}}',
+    name: '{{firstName()}} {{surname()}}',
+    genre: '{{gender()}}',
+    role: function (tags) {
+      var roles = ['chevalier', 'mage', 'archer', 'voleur'];
+      return roles[tags.integer(0, roles.length - 1)];
+    }
+  }
+]

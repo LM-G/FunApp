@@ -1,6 +1,15 @@
 <h2>Liste des contacts</h2>
-<ul>
-    <li ng-repeat="person in contacts.getListe() track by person.id">
-        <a ng-href="/contacts/{{person.id}}" ng-bind="person.name"></a>
-    </li>
-</ul>
+<br>
+<div class="row">
+	<div class="col-sm-3">
+		<input class="form-control" type="text" ng-model="searchBox" placeholder="{{ 'global.searchBox.placeholder' | translate }}">
+	</div>
+</div>
+<br>
+<div class="row">
+	<ul>
+	    <li ng-repeat="person in contacts.getListe() | filter : searchBox track by person.id">
+	        <a ng-href="/contacts/{{person.id}}" ng-bind="person.name"></a>
+	    </li>
+	</ul>
+</div>

@@ -9,13 +9,22 @@
 	function contactsContenu() {
 		var contenu = {};
 
-		var contacts = [
-			{ id:0, name: "Toto", age:42, genre:"male", role : "chevalier" }, 
-			{ id:1, name: "Titi", age: 243, genre:"female", role : "mage" }
-		];
+		var contacts;
+
+		contenu.setListeContacts = function(liste){
+			contacts = liste;
+		}
 
 		contenu.getListeContacts = function(){
 			return contacts;
+		}
+
+		contenu.getContact = function(id){
+			for(var i = 0; i < contacts.length; i++){
+				if(id === contacts[i].id){
+					return contacts[i];
+				}
+			}
 		}
 		
 		/* Exécution */

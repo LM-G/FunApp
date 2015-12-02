@@ -5,7 +5,7 @@
 
 	<title>Fun Application</title>
 	<base href="/">
-
+	<link href="/assets/css/style.css" rel="stylesheet">
 	<!-- Bootstrap -->
     <link href="/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -19,12 +19,16 @@
 	<script src="/bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
 </head>
 <body class="container">
+	<!-- menu -->
 	<div header-menu></div>
+	<!-- contenu de la page -->
 	<div class="row">
     	<div class="col-sm-12">
 			<div ui-view></div>
 		</div>
 	</div>
+	<!-- footer -->
+	<!-- <div footer></div> -->
 
 	<!-- chargement des scripts -->
 	<script src="modules.js"></script>
@@ -52,6 +56,7 @@
 	<!-- contacts -->
 	<script src="/components/contacts/contacts-module.js"></script>
 	<script src="/components/contacts/contacts-state.js"></script>
+	<script src="/components/contacts/contacts-service.js"></script>
 	<script src="/components/contacts/contacts-contenu.js"></script>
 	<script src="/components/contacts/contacts.js"></script>
 	<!-- contacts : liste -->

@@ -5,13 +5,15 @@
 			'$scope',
 			'$state',
 			'contactsContenu',
+			'contactsService',
 			contactsCtrl
 		]);
 
 	/* Controleur de l'état contacts */
-	function contactsCtrl($scope, $state, contenu) {
+	function contactsCtrl($scope, $state, contenu, service) {
 		var contacts = this;
 
+		contacts.searchBox = null;
 		contacts.getListe = contenu.getListeContacts;
 
 	    /* Listeners */
@@ -20,6 +22,11 @@
 	    })
 		
 		/* Exécution */
+		service.getContacts().then(function(listeContacts){
+			console.warn(listeContacts);
+			contenu.setListeContacts(listeContacts);
+		});
+
 		console.info("contacts charge");
 	}
 })();

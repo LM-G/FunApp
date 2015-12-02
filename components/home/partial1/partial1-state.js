@@ -54,5 +54,4 @@
 
 		console.info("config partial1 charge");
 	}
-
 })();
