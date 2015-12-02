@@ -20,6 +20,17 @@
 		]);
 
 	function configuration($stateProvider, $urlRouterProvider, contactsConfig) {
+		
+		angular.extend(contactsConfig.config, {
+			resolve : {
+				listeContacts : [
+					'$q',
+					'contactsService',
+					getListeContacts
+				]
+			}
+		});
+
 		$stateProvider
 			.state(contactsConfig.nom, contactsConfig.config);
 
@@ -27,5 +38,9 @@
 		$urlRouterProvider.when('/contacts/', '/contacts/liste');
 
 		console.info("config contacts charge");
+
+		function getListeContacts($q, contactsService){
+			return contactsService.getContacts();
+		}
 	}
 })();

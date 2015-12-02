@@ -3,17 +3,15 @@
 	angular.module('funApp.views.contacts')
 		.controller('detailContactsCtrl', [
 			'$scope',
-			'$state',
-			'$stateParams',
-			'contactsContenu',
+			'contact',
 			detailContactsCtrl
 		]);
 
 	/* Controleur de l'état contacts */
-	function detailContactsCtrl($scope, $state, $stateParams, contactsContenu) {
+	function detailContactsCtrl($scope, contact) {
 		var detail = this;
-		console.log("coucou");
-		var listeContacts = contactsContenu.getListeContacts();
+
+		detail.person = contact;
 
 	    /* Listeners */
 	    $scope.$on('$destroy', function(){
@@ -21,7 +19,6 @@
 	    })
 		
 		/* Exécution */
-		detail.person = listeContacts[$stateParams.id];
-		console.info("detail contacts charge");
+		console.info("controller detail contacts charge");
 	}
 })();

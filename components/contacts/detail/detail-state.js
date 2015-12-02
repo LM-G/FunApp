@@ -21,17 +21,29 @@
 		angular.extend(contactsDetailConfig.config, {
 			resolve : {
 				contact : [
+					'$q',
 					'$stateParams',
-					'contactsContenu', 
-					function(contactsContenu){
-						var contact = contactsContenu.getContact();
-						if( contact != null){
-							return contact;
+					'listeContacts', 
+					function($q, $stateParams, listeContacts){
+						var deferred = $q.defer();
+
+						function testExistance(contacts, id){
+							for(var i = 0; i < contacts.length; i++){
+								if(id == contacts[i].id){
+									deferred.resolve(contacts[i]);
+								}
+							}
+							deferred.reject({reason : 'contact inconnu', fallback : 'contacts.liste'});
 						}
+
+						testExistance(listeContacts, $stateParams.id);
+
+						return deferred.promise;
 					}
 				]
 			}
-		})
+		});
+
 		$stateProvider
 			.state(contactsDetailConfig.nom, contactsDetailConfig.config);
 

@@ -21,7 +21,7 @@
 
 		contenu.getContact = function(id){
 			for(var i = 0; i < contacts.length; i++){
-				if(id === contacts[i].id){
+				if(id == contacts[i].id){
 					return contacts[i];
 				}
 			}

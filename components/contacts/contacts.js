@@ -6,11 +6,12 @@
 			'$state',
 			'contactsContenu',
 			'contactsService',
+			'listeContacts',
 			contactsCtrl
 		]);
 
 	/* Controleur de l'état contacts */
-	function contactsCtrl($scope, $state, contenu, service) {
+	function contactsCtrl($scope, $state, contenu, service, listeContacts) {
 		var contacts = this;
 
 		contacts.searchBox = null;
@@ -22,11 +23,8 @@
 	    })
 		
 		/* Exécution */
-		service.getContacts().then(function(listeContacts){
-			console.warn(listeContacts);
-			contenu.setListeContacts(listeContacts);
-		});
+		contenu.setListeContacts(listeContacts);
+		console.info("controller contacts charge");
 
-		console.info("contacts charge");
 	}
 })();

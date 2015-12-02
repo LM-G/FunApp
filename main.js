@@ -25,6 +25,7 @@
 
   	.run([
       '$rootScope',
+      '$state',
       main]);
 
     /**
@@ -52,8 +53,20 @@
     /**
      * Boucle principale de l'application
      */
-  	function main($rootScope) {
+  	function main($rootScope, $state) {
       console.log('client lance');
+
+      $rootScope.$on('$stateChangeError', 
+        function(event, toState, toParams, fromState, fromParams, error){
+          console.warn('$stateChangeError');
+          console.warn(error);
+          if(error.fallback){
+            $state.go(error.fallback);
+          } else {
+            $state.go('home');
+          }
+        }
+      );
   	}
 
     function configRoutes($urlRouterProvider){
