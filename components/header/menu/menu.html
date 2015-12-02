@@ -1,21 +1,20 @@
 <nav class="navbar navbar-default">
   <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">FunApp</a>
+      <a class="navbar-brand" ui-sref="home">FunApp</a>
     </div><!-- /.navbar-header -->
     <ul class="nav navbar-nav">
         <li ng-class="{'active': menu.isActive('home')}">
         	<a ui-sref="home">Home</a>
         </li>
-        <li ng-class="{'active': menu.isActive('home.partial1')}">
-        	<a ui-sref="home.partial1">Partial1</a>
+         <li ng-class="{'active': menu.isActive('contacts')}">
+            <a href="/contacts/liste">Contacts</a>
         </li>
-    </ul>
+    </ul><!-- /.navbar-nav -->
     <ul class="nav navbar-nav navbar-right">
         <li ng-class="{'active': menu.isActive('about')}">
         	<a ui-sref="about">About</a>
         </li>
-      </ul>
+    </ul><!-- /.navbar-right -->
   </div><!-- /.container-fluid -->
 </nav>

@@ -1,0 +1,6 @@
+<h2>Liste des contacts</h2>
+<ul>
+    <li ng-repeat="person in contacts.getListe() track by person.id">
+        <a ng-href="/contacts/{{person.id}}" ng-bind="person.name"></a>
+    </li>
+</ul>

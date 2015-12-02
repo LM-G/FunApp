@@ -6,7 +6,7 @@
 			type : "modal",
 			config : {
 		        url: "/partial1",
-		        templateUrl: "/views/home/partial1/partial1.html",
+		        templateUrl: "/components/home/partial1/partial1.html",
 		        controller: "partial1Ctrl",
 		        controllerAs: "partial1"
 	    	}
@@ -19,7 +19,6 @@
 
 	function configuration($stateProvider, partial1Config) {
 		function ouvrirModale($state, $uibModal){
-
 			angular.extend(partial1Config.config ,{
 				resolve: {
 		      		item : function(){
@@ -37,7 +36,7 @@
 			})
 			.finally(function() {
 				console.info('fermeture modale partial1');
-				/* Redirection sur /home apres la fermeture de la modale */
+				/* revenir à l'état parent : (home) */
 	           	$state.go('^');
 	        });
 		}

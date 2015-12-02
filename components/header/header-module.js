@@ -5,7 +5,7 @@
 	angular.module('funApp.views.header', [])
 		.constant('headerComponents', {
 			MENU : {
-				path : "/views/header/menu/menu.html"
+				path : "/components/header/menu/menu.html"
 			}
 		});
 

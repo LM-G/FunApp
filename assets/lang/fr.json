@@ -3,15 +3,16 @@
 		"bouton": {
 			"ok":"Valider",
 			"ko":"Annuler",
+			"retour":"Retour",
 			"go_partial1":"Ouvrir partial 1",
 			"go_about":"Aller à About",
 			"go_home":"Aller à Home"
 		}
 	},
 	"home":{
-		"titre":"Ceci est la vue \"Home\"",
+		"titre":"Page \"Home\"",
 		"partial1":{
-			"titre":"Vue partial 1",
+			"titre":"Page partial 1",
 			"sous_titre":"Je suis une modale !",
 			"form1" : {
 				"input1":{
@@ -22,6 +23,16 @@
 		}
 	},
 	"about":{
-		"titre":"Ceci est la vue \"About\""
+		"titre":"Page \"About\""
+	},
+	"contacts":{
+		"titre":"Page \"Contacts\"",
+		"liste":{
+			"titre":"Liste des contacts"
+		},
+		"detail":{
+			"titre":"Détails de {{name}}"
+		}
+		
 	}
 }

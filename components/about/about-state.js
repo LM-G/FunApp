@@ -9,7 +9,7 @@
 			type : "view",
 			config : {
 		        url: "/about",
-		        templateUrl: "/views/about/about.html"
+		        templateUrl: "/components/about/about.html"
 	    	}
 	    })
 		.config([

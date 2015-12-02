@@ -9,7 +9,7 @@
 			type : "view",
 			config : {
 		        url: "/home",
-		        templateUrl: "/views/home/home.html",
+		        templateUrl: "/components/home/home.html",
 		        controller: "homeCtrl",
 		        controllerAs: "home"
 	    	}

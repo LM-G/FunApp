@@ -10,7 +10,7 @@
 		var menu = this;
 
 		menu.isActive = function(state){
-			return $state.current.name == state;
+			return $state.includes(state);
 		}
 
 		console.log("controller menu charge");
