@@ -36,7 +36,12 @@
       configRoutes($urlRouterProvider);
       // beautification de l'url
       $locationProvider.html5Mode(true);
-    }
+    }/* ! routage */
+
+    function configRoutes($urlRouterProvider){
+      $urlRouterProvider
+        .otherwise("/home");
+    }/* ! configRoutes */
     
     /**
      * Chargement de la configuration du module de traduction
@@ -48,29 +53,15 @@
       });
       $translateProvider.useSanitizeValueStrategy(null);
       $translateProvider.preferredLanguage('fr');
-    }
+    }/* ! traduction */
 
     /**
      * Boucle principale de l'application
      */
   	function main($rootScope, $state) {
       console.log('client lance');
+  	}/* ! main */
 
-      $rootScope.$on('$stateChangeError', 
-        function(event, toState, toParams, fromState, fromParams, error){
-          console.warn('$stateChangeError');
-          console.warn(error);
-          if(error.fallback){
-            $state.go(error.fallback);
-          } else {
-            $state.go('home');
-          }
-        }
-      );
-  	}
+    
 
-    function configRoutes($urlRouterProvider){
-      $urlRouterProvider
-        .otherwise("/home");
-    }
 })();

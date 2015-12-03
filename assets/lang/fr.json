@@ -12,6 +12,9 @@
 			"placeholder":"Recherche"
 		}
 	},
+	"error":{
+		"titre":"Oups ! Une erreur est survenue :("
+	},
 	"home":{
 		"titre":"Page \"Home\"",
 		"partial1":{
