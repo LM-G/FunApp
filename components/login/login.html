@@ -2,6 +2,9 @@
 	<h1 ng-bind=" 'login.titre' | translate"></h1>
 	<br><hr>
 	<h1 ng-bind=" 'login.sous_titre' | translate"></h1>
+	<uib-alert class="animated pulse" type="danger" close="login.closeAlert()" ng-if="login.hasError">
+	 	<span ng-bind=" 'login.form.alert.bad_credentials' | translate "></span>
+	</uib-alert>
 	<form name="form" ng-submit="login.signin(form)">
 		<!-- Champ 'Email / Pseudo' -->
 		<div class="form-group">

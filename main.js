@@ -61,7 +61,4 @@
   	function main($rootScope, $state) {
       console.log('client lance');
   	}/* ! main */
-
-    
-
 })();

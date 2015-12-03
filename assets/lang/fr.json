@@ -27,7 +27,10 @@
 				"label":"Mot de passe",
 				"placeholder":"Mot de passe"
 			},
-			"rememberme":"Se souvenir de moi"
+			"rememberme":"Se souvenir de moi",
+			"alert":{
+				"bad_credentials":"Username ou mot de passe incorrect."
+			}
 		}
 	},
 	"home":{
