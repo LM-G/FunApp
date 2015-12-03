@@ -11,16 +11,17 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <!-- Animations -->
     <link href=" /bower_components/animate.css/animate.min.css" rel="stylesheet">
-   
-
+    
     <!-- Angular -->
 	<script src="/bower_components/angular/angular.js"></script>
 	<!-- traduction -->
 	<script src="/bower_components/angular-translate/angular-translate.min.js"></script>
+	<!-- misc -->
 	<script src="/bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.min.js"></script>
 	<script src="/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
 	<script src="/bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
 	<script src="/bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+	<script src="/bower_components/a0-angular-storage/dist/angular-storage.min.js"></script>
 </head>
 <body>
 	<!-- menu -->
@@ -35,6 +36,13 @@
 	<script src="/constantes/constantes.module.js"></script>
 	<script src="/constantes/errors.js"></script>
 	<!-- services globaux -->
+	<!-- services globaux : auth -->
+	<script src="/services/authentication/auth.module.js"></script>
+	<script src="/services/authentication/auth.service.js"></script>
+	<!-- services globaux : proxy -->
+	<script src="/services/proxy/proxy.module.js"></script>
+	<script src="/services/proxy/User.js"></script>
+	<!-- services globaux : misc -->
 	<script src="/services/services.module.js"></script>
 	<script src="/services/popInService.js"></script>
 	<!-- header -->
@@ -52,6 +60,11 @@
 	<script src="/components/error/error.module.js"></script>
 	<script src="/components/error/error.route.js"></script>
 	<script src="/components/error/error.js"></script>
+	<!-- login -->
+	<script src="/components/login/login.module.js"></script>
+	<script src="/components/login/login.service.js"></script>
+	<script src="/components/login/login.route.js"></script>
+	<script src="/components/login/login.js"></script>
 	<!-- home -->
 	<script src="/components/home/home.module.js"></script>
 	<script src="/components/home/home.route.js"></script>

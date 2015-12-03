@@ -15,6 +15,21 @@
 	"error":{
 		"titre":"Oups ! Une erreur est survenue :("
 	},
+	"login":{
+		"titre":"Page login",
+		"sous_titre":"Connexion",
+		"form":{
+			"input1":{
+				"label":"Username",
+				"placeholder":"Username"
+			},
+			"input2":{
+				"label":"Mot de passe",
+				"placeholder":"Mot de passe"
+			},
+			"rememberme":"Se souvenir de moi"
+		}
+	},
 	"home":{
 		"titre":"Page \"Home\"",
 		"partial1":{

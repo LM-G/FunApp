@@ -9,6 +9,7 @@
     "bootstrap": "~3.3.6",
     "angular-translate": "~2.8.1",
     "angular-translate-loader-static-files": "~2.8.1",
-    "animate.css": "~3.4.0"
+    "animate.css": "~3.4.0",
+    "a0-angular-storage": "~0.0.13"
   }
 }

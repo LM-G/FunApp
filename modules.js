@@ -5,6 +5,7 @@
 	// composants
 	angular.module('funApp.views', [
 		'funApp.views.error',
+		'funApp.views.login',
 		'funApp.views.home',
 		'funApp.views.header',
 		'funApp.views.footer',

@@ -10,7 +10,7 @@
 </div>
 <br>
 <div class="row">
-	<ul>
+	<ul class="animated fadeIn">
 	    <li ng-repeat="person in contacts.getListe() | filter : searchBox track by person.id">
 	        <a ng-href="/contacts/{{person.id}}" ng-bind="person.name"></a>
 	    </li>

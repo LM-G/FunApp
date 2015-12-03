@@ -23,7 +23,7 @@
 			if(error.fallback){
 				$state.go(error.fallback);
 			} else {
-				$state.go('home');
+				$state.go('error');
 			}
 		}/* ! handleStateChangeError */
  	}/* ! errorHandler */

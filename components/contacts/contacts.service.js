@@ -24,7 +24,7 @@
             }
 
             function getContactsKO(error){
-            	console.error('XHR Failed for getAvengers.' + error.data);
+            	console.error('XHR Failed for getContacts.' + error.data);
             }
 		}
 	}
