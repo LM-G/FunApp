@@ -40,5 +40,8 @@
 			"titre":"Détails de {{name}}"
 		}
 		
+	},
+	"footer" : {
+		"content" : "Je suis le footer !"
 	}
 }

@@ -8,6 +8,10 @@
 	<link href="/assets/css/style.css" rel="stylesheet">
 	<!-- Bootstrap -->
     <link href="/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- Animations -->
+    <link href=" /bower_components/animate.css/animate.min.css" rel="stylesheet">
+   
 
     <!-- Angular -->
 	<script src="/bower_components/angular/angular.js"></script>
@@ -18,17 +22,13 @@
 	<script src="/bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
 	<script src="/bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
 </head>
-<body class="container">
+<body>
 	<!-- menu -->
-	<div header-menu></div>
+	<header class="header"></header>
 	<!-- contenu de la page -->
-	<div class="row">
-    	<div class="col-sm-12">
-			<div ui-view></div>
-		</div>
-	</div>
+	<div class="container" ui-view></div>
 	<!-- footer -->
-	<!-- <div footer></div> -->
+	<footer class="footer"></footer>
 
 	<!-- chargement des scripts -->
 	<!-- constantes globales -->
@@ -42,6 +42,9 @@
 	<script src="/components/header/header.route.js"></script>
 	<!-- header : menu -->
 	<script src="/components/header/menu/menu.js"></script>
+	<!-- footer -->
+	<script src="/components/footer/footer.module.js"></script>
+	<script src="/components/footer/footer.route.js"></script>
 	<!-- about -->
 	<script src="/components/about/about.module.js"></script>
 	<script src="/components/about/about.route.js"></script>
