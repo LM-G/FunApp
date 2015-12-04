@@ -30,11 +30,13 @@
 					.then(function(result){
 						console.info('result : ');
 						console.log(result);
+						/*
 						if(result.token){
 							// connexion ok
 						} else {
 							login.hasError = true;
-						}
+						}*/
+						$state.go('home');
 					});
 			},1000);
 		}
