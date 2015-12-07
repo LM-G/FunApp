@@ -46,7 +46,7 @@
     /**
      * Chargement de la configuration du module de traduction
      */
-    function traduction ($translateProvider){
+    function traduction ($translateProvider, readerUtils){
       $translateProvider.useStaticFilesLoader({
         prefix: '/assets/lang/',
         suffix: '.json'

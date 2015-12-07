@@ -24,6 +24,6 @@
 		$stateProvider
 			.state(loginConfig.nom, loginConfig.config);
 
-		console.info("config login charge");
+		console.info("config login chargee");
 	}
 })();

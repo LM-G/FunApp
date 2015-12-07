@@ -22,6 +22,6 @@
 		$stateProvider
 			.state(aboutConfig.nom, aboutConfig.config);
 
-		console.info("config about charge");
+		console.info("config about chargee");
 	}
 })();

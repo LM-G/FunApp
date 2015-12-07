@@ -24,6 +24,6 @@
 		$stateProvider
 			.state(homeConfig.nom, homeConfig.config);
 
-		console.info("config home charge");
+		console.info("config home chargee");
 	}
 })();

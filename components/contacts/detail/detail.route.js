@@ -60,6 +60,6 @@
 		$stateProvider
 			.state(contactsDetailConfig.nom, contactsDetailConfig.config);
 
-		console.info("config detail_contacts charge");
+		console.info("config detail_contacts chargee");
 	}/* ! configuration */
 })();

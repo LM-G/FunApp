@@ -52,6 +52,6 @@
 			]
 		});
 
-		console.info("config partial1 charge");
+		console.info("config partial1 chargee");
 	}
 })();

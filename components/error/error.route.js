@@ -22,6 +22,6 @@
 		$stateProvider
 			.state(errorConfig.nom, errorConfig.config);
 
-		console.info("config error charge");
+		console.info("config error chargee");
 	}
 })();

@@ -15,6 +15,13 @@
 		/* Récupération d'un élement en fonction d'un id */
 		service.findById = findById;
 
+		/* fonctions internes */
+		/**
+		 * [findById description]
+		 * @param  {[type]} liste [description]
+		 * @param  {[type]} id    [description]
+		 * @return {[type]}       [description]
+		 */
 		function findById(liste, id){
 			for(var i = 0; i < liste.length; i++){
 				if(id == liste[i].id){

@@ -57,9 +57,12 @@
 		"detail":{
 			"titre":"Détails de {{name}}"
 		}
-		
 	},
 	"footer" : {
 		"content" : "Je suis le footer !"
+	},
+	"dashboard" : {
+		"titre" : "Page \"Dashboard\""
 	}
+
 }

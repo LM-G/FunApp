@@ -9,6 +9,7 @@
 	function errorCtrl($state) {
 		var error = this;
 		
+		/* Exécution */
 		console.log("controller error charge");
 	}
 })();

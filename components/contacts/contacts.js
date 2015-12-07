@@ -15,6 +15,7 @@
 		var contacts = this;
 
 		contacts.searchBox = null;
+		
 		contacts.getListe = contenu.getListeContacts;
 
 	    /* Listeners */

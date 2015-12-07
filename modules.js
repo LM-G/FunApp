@@ -10,6 +10,7 @@
 		'funApp.views.header',
 		'funApp.views.footer',
 		'funApp.views.about',
-		'funApp.views.contacts'
+		'funApp.views.contacts',
+		'funApp.views.dashboard'
 	]);
 })();

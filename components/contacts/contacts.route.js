@@ -37,7 +37,7 @@
 		$urlRouterProvider.when('/contacts', '/contacts/liste');
 		$urlRouterProvider.when('/contacts/', '/contacts/liste');
 
-		console.info("config contacts charge");
+		console.info("config contacts chargee");
 
 		function getListeContacts($q, contactsService){
 			return contactsService.getContacts();
