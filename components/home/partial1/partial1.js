@@ -45,6 +45,6 @@
 	    })
 		
 		/* Exécution */
-		console.info("partial1 charge");
+		console.log("controller partial1 charge");
 	}
 })();

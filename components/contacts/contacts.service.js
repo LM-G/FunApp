@@ -27,5 +27,20 @@
             	console.error('XHR Failed for getContacts.' + error.data);
             }
 		}
+
+		function getContact(id){
+			return $http.get( '/assets/mock/contact' + id + '.json', {cache:true})
+				.then(getContactOK)
+            	.catch(getContactKO);
+
+            function getContactOK(response){
+            	return response.data;
+            }
+
+            function getContactKO(error){
+            	console.error('XHR Failed for getContacts.' + error.data);
+            	return error;
+            }
+		}
 	}
 })();
