@@ -6,16 +6,11 @@
   	angular.module('funApp', [
   		'ui.router',
       'ui.bootstrap',
-      'oc.lazyLoad',
       'pascalprecht.translate',
       'funApp.views',
       'funApp.services',
       'funApp.constantes'
     ])
-
-    .config([
-      '$ocLazyLoadProvider',
-      configLoading])
 
     /* routes et états */
   	.config([
@@ -40,45 +35,16 @@
   	function routage ($locationProvider, $urlRouterProvider, $stateProvider){
       // configuration des routes principales
       configRoutes($urlRouterProvider);
-      configEtats($stateProvider);
       // beautification de l'url
       $locationProvider.html5Mode(true);
     }/* ! routage */
 
-    function configLoading($ocLazyLoadProvider){
-      $ocLazyLoadProvider.config({
-        debug: true,
-        modules: [{
-          name: 'funApp.views.test',
-          files: [
-            '/components/test/test.module.js',
-            '/components/test/test.route.js'
-          ],
-          serie:true
-        }]
-      });
-    }
 
     function configRoutes($urlRouterProvider){
       $urlRouterProvider
         .otherwise("/home");
     }/* ! configRoutes */
 
-    function configEtats($stateProvider){
-      $stateProvider.state('loadTest', {
-        url: "/test", // root route
-        onEnter: ['$state', function($state) {
-          console.log('doing something');
-          $state.go('test');
-        }],
-        resolve: { // Any property in resolve should return a promise and is executed before the view is loaded
-          load: ['$ocLazyLoad', function($ocLazyLoad) {
-            // you can lazy load files for an existing module
-            return $ocLazyLoad.load('funApp.views.test');
-          }]
-        }
-      });
-    }
     
     /**
      * Chargement de la configuration du module de traduction

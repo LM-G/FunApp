@@ -1,0 +1,30 @@
+{
+  "name": "fun-app",
+  "version": "1.0.0",
+  "description": "Application pour le fun",
+  "main": "main.js",
+  "dependencies": {
+    "gulp": "^3.9.1"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LM-G/FunApp.git"
+  },
+  "keywords": [
+    "angular",
+    "angularjs",
+    "fun"
+  ],
+  "author": "lmguillemot@asi.fr",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LM-G/FunApp/issues"
+  },
+  "homepage": "https://github.com/LM-G/FunApp#readme"
+}
