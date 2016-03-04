@@ -1,0 +1,68 @@
+{
+	"global":{
+		"bouton": {
+			"ok":"Valider",
+			"ko":"Annuler",
+			"retour":"Retour",
+			"go_partial1":"Ouvrir partial 1",
+			"go_about":"Aller à About",
+			"go_home":"Aller à Home"
+		},
+		"searchBox" : {
+			"placeholder":"Recherche"
+		}
+	},
+	"error":{
+		"titre":"Oups ! Une erreur est survenue :("
+	},
+	"login":{
+		"titre":"Page login",
+		"sous_titre":"Connexion",
+		"form":{
+			"input1":{
+				"label":"Username",
+				"placeholder":"Username"
+			},
+			"input2":{
+				"label":"Mot de passe",
+				"placeholder":"Mot de passe"
+			},
+			"rememberme":"Se souvenir de moi",
+			"alert":{
+				"bad_credentials":"Username ou mot de passe incorrect."
+			}
+		}
+	},
+	"home":{
+		"titre":"Page \"Home\"",
+		"partial1":{
+			"titre":"Page partial 1",
+			"sous_titre":"Je suis une modale !",
+			"form1" : {
+				"input1":{
+					"label":"Valeur",
+					"placeholder":"Entrez une valeur"
+				}
+			}
+		}
+	},
+	"about":{
+		"titre":"Page \"About\""
+	},
+	"contacts":{
+		"titre":"Page \"Contacts\"",
+		"liste":{
+			"titre":"Liste des contacts"
+		},
+		"detail":{
+			"titre":"Détails de {{name}}"
+		}
+	},
+	"footer" : {
+		"content" : "Je suis le footer !"
+	},
+	"dashboard" : {
+		"titre" : "Page \"Dashboard\""
+	}
+
+}
