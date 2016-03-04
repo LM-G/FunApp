@@ -1,22 +1,15 @@
 angular.module('funApp.views.error')
-	.constant('errorConfig', {
-		nom : "error",
-		type : "view",
-		config : {
-	        url: "/error",
-	        templateUrl: "/components/error/error.html",
-	        controller: "errorCtrl",
-	        controllerAs: "error"
-    	}
-    })
-	.config([
-		'$stateProvider',
-		'errorConfig',
-		configuration
-	]);
+	.config(configurationError);
 
-function configuration($stateProvider, errorConfig) {
+function configurationError($stateProvider) {
+	var config = {
+      url: "/error",
+      templateUrl: "/components/error/error.html",
+      controller: "errorCtrl",
+      controllerAs: "error"
+	}
 	$stateProvider
-		.state(errorConfig.nom, errorConfig.config);
+		.state("error", config);
+
 	console.info("config error chargee");
 }

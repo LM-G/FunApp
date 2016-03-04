@@ -1,9 +1,5 @@
 angular.module('funApp.views.contacts')
-	.service('contactsService', [
-		'$http',
-		'$q',
-		contactsService
-	]);
+	.service('contactsService', contactsService);
 
 /* Controleur de l'état contacts */
 function contactsService($http, $q) {

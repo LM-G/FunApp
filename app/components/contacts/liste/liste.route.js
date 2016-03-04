@@ -7,11 +7,7 @@ angular.module('funApp.views.contacts')
 	        templateUrl: "/components/contacts/liste/contacts.liste.html"
     	}
     })
-	.config([
-		'$stateProvider',
-		'contactsListeConfig',
-		configuration
-	]);
+	.config(configuration);
 
 function configuration($stateProvider, contactsListeConfig) {
 	$stateProvider

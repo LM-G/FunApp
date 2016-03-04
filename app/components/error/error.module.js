@@ -1,15 +1,11 @@
 console.log('Chargement du module error ...');
 angular.module('funApp.views.error', [])
-.run([
-		'$rootScope',
-		'$state',
-		 errorHandler
-	]);
-	console.log('Modules error charge.');
+	.run(errorHandler);
+console.log('Modules error charge.');
 
-	function errorHandler($rootScope, $state){
-		console.log('errorHandler en cours de fonctionnement');
-		$rootScope.$on('$stateChangeError', handleStateChangeError);
+function errorHandler($rootScope, $state){
+	console.log('errorHandler en cours de fonctionnement');
+	$rootScope.$on('$stateChangeError', handleStateChangeError);
 
 	/**
 	* Gestion des erreur de chargement d'état qui suivent une rejection

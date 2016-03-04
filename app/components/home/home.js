@@ -1,8 +1,5 @@
 angular.module('funApp.views.home')
-	.controller('homeCtrl', [
-		'$state',
-		homeCtrl
-	]);
+	.controller('homeCtrl', homeCtrl);
 
 function homeCtrl($state) {
 	var home = this;

@@ -2,25 +2,18 @@
  * Chargement des directives et états de la page login
  */
 angular.module('funApp.views.login')
-	.constant('loginConfig', {
-		nom : "login",
-		type : "view",
-		config : {
-	        url: "/login",
-	        templateUrl: "/components/login/login.html",
-	        controller:'loginCtrl',
-	        controllerAs:'login'
-    	}
-    })
-	.config([
-		'$stateProvider',
-		'loginConfig',
-		configuration
-	]);
+	.config(configuration);
 
-function configuration($stateProvider,loginConfig) {
+function configuration($stateProvider) {
+	var config = {
+    url: "/login",
+    templateUrl: "/components/login/login.html",
+    controller:'loginCtrl',
+    controllerAs:'login'
+	};
+
 	$stateProvider
-		.state(loginConfig.nom, loginConfig.config);
+		.state("login", config);
 
 	console.info("config login chargee");
 }

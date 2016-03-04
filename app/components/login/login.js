@@ -1,12 +1,7 @@
 angular.module('funApp.views.login')
-	.controller('loginCtrl', [
-		'$state',
-		'$timeout',
-		'loginService',
-		loginCtrl
-	]);
+	.controller('loginCtrl', loginCtrl);
 
-function loginCtrl($state, $timeout, service) {
+function loginCtrl($state, $timeout, loginService) {
 	var login = this;
 
 	/* variables */
@@ -24,7 +19,7 @@ function loginCtrl($state, $timeout, service) {
 	function signin(form){
 		console.log('connexion ...');
 		$timeout(function(){
-			service.signin(login.credentials)
+			loginService.signin(login.credentials)
 				.then(function(result){
 					console.info('result : ');
 					console.log(result);

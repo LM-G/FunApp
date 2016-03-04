@@ -10,11 +10,7 @@ angular.module('funApp.views.about')
 	        templateUrl: "/components/about/about.html"
     	}
     })
-	.config([
-		'$stateProvider',
-		'aboutConfig',
-		configAbout
-	]);
+	.config(configAbout);
 
 function configAbout($stateProvider, aboutConfig) {
 	$stateProvider

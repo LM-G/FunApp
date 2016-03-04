@@ -9,11 +9,7 @@ angular.module('funApp.views.contacts')
 	        controllerAs: "detail"
     	}
     })
-	.config([
-		'$stateProvider',
-		'contactsDetailConfig',
-		configuration
-	]);
+	.config(configuration);
 
 function configuration($stateProvider, contactsDetailConfig) {
 	

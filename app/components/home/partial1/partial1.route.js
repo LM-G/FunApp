@@ -1,47 +1,17 @@
 angular.module('funApp.views.home')
-	.constant('partial1Config', {
-		nom : "home.partial1",
-		type : "modal",
-		config : {
-	        url: "/partial1",
-	        templateUrl: "/components/home/partial1/partial1.html",
-	        controller: "partial1Ctrl",
-	        controllerAs: "partial1"
-    	}
-    })
-	.config([
-		'$stateProvider',
-		'partial1Config',
-		configuration
-	]);
+	.config(configurationPartial1);
 
-function configuration($stateProvider, partial1Config) {
-	function ouvrirModale($state, $uibModal){
-		angular.extend(partial1Config.config ,{
-			resolve: {
-	      		item : function(){
-	            	return {value: 'simple!'}
-	            }
-		    }
-		});
-
-		$uibModal.open(partial1Config.config)
-		.result.then(function(result){
-			console.info("result : ");
-			console.log(result);
-		},function(reason){
-			console.info("reason : " + reason);
-		})
-		.finally(function() {
-			console.info('fermeture modale partial1');
-			/* revenir à l'état parent : (home) */
-           	$state.go('^');
-        });
+function configurationPartial1($stateProvider) {
+	var config = {
+    url: "/partial1",
+    templateUrl: "/components/home/partial1/partial1.html",
+    controller: "partial1Ctrl",
+    controllerAs: "partial1"
 	}
 
-	$stateProvider
-		.state(partial1Config.nom, {
-		url : partial1Config.config.url,
+  $stateProvider
+	.state("home.partial1", {
+		url : config.url,
 		onEnter : [
 			'$state',
 			'$uibModal',
@@ -50,5 +20,30 @@ function configuration($stateProvider, partial1Config) {
 		]
 	});
 
+	function ouvrirModale($state, $uibModal){
+		angular.extend(config , {
+			resolve: {
+	      		item : function(){
+	            	return {value: 'simple!'}
+	            }
+		    }
+		});
+
+		$uibModal
+			.open(config)
+			.result
+			.then(function(result){
+				console.info("result : ");
+				console.log(result);
+			},function(reason){
+				console.info("reason : " + reason);
+			})
+			.finally(function() {
+				console.info('fermeture modale partial1');
+				/* revenir à l'état parent : (home) */
+        $state.go('^');
+      });
+	}
+	
 	console.info("config partial1 chargee");
 }

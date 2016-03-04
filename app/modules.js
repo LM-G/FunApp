@@ -9,7 +9,8 @@ angular.module('funApp.views', [
 	'funApp.views.footer',
 	'funApp.views.about',
 	'funApp.views.contacts',
-	'funApp.views.dashboard'
+	'funApp.views.dashboard',
+	'funApp.views.labo'
 ]);
 
 // templates html

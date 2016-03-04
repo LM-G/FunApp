@@ -1,20 +1,13 @@
 angular.module('funApp.views.contacts')
-	.controller('contactsCtrl', [
-		'$scope',
-		'$state',
-		'contactsContenu',
-		'contactsService',
-		'listeContacts',
-		contactsCtrl
-	]);
+	.controller('contactsCtrl', contactsCtrl);
 
 /* Controleur de l'état contacts */
-function contactsCtrl($scope, $state, contenu, service, listeContacts) {
+function contactsCtrl($scope, $state, contactsContenu, contactsService, listeContacts) {
 	var contacts = this;
 
 	contacts.searchBox = null;
 	
-	contacts.getListe = contenu.getListeContacts;
+	contacts.getListe = contactsContenu.getListeContacts;
 
     /* Listeners */
     $scope.$on('$destroy', function(){
@@ -22,7 +15,7 @@ function contactsCtrl($scope, $state, contenu, service, listeContacts) {
     })
 	
 	/* Exécution */
-	contenu.setListeContacts(listeContacts);
+	contactsContenu.setListeContacts(listeContacts);
 	console.info("controller contacts charge");
 
 }

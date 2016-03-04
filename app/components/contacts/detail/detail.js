@@ -1,9 +1,5 @@
 angular.module('funApp.views.contacts')
-	.controller('detailContactsCtrl', [
-		'$scope',
-		'contact',
-		detailContactsCtrl
-	]);
+	.controller('detailContactsCtrl', detailContactsCtrl);
 
 /* Controleur de l'état contacts */
 function detailContactsCtrl($scope, contact) {
