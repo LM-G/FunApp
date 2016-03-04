@@ -20,6 +20,6 @@ $ bower install
 $ gulp
 ```
 
-##4
+##4 - Serveur
 
 Faire pointer un serveur Apache sur le dossier /dist généré
