@@ -1,108 +1,25 @@
 <html lang="fr" ng-app="funApp">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Fun Application</title>
+		<base href="/">
+	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	    <!-- css -->
+	    <link href="/css/styles.css" rel="stylesheet">
+	    <!-- libs -->
+			<script src="/js/libs.js"></script>
+	</head>
+	<body>
+		<!-- menu -->
+		<header class="header"></header>
+		<!-- contenu de la page -->
+		<div class="container" ui-view></div>
+		<!-- footer -->
+		<footer class="footer"></footer>
 
-<head>
-
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-	<title>Fun Application</title>
-	<base href="/">
-	<link href="/assets/css/style.css" rel="stylesheet">
-	<!-- Bootstrap -->
-    <link href="/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <!-- Animations -->
-    <link href=" /bower_components/animate.css/animate.min.css" rel="stylesheet">
-    
-    <!-- Angular -->
-	<script src="/bower_components/angular/angular.js"></script>
-	<!-- traduction -->
-	<script src="/bower_components/angular-translate/angular-translate.min.js"></script>
-	<!-- misc -->
-	<script src="/bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.min.js"></script>
-	<script src="/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
-	<script src="/bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
-	<script src="/bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
-	<script src="/bower_components/a0-angular-storage/dist/angular-storage.min.js"></script>
-</head>
-<body>
-	<!-- menu -->
-	<header class="header"></header>
-	<!-- contenu de la page -->
-	<div class="container" ui-view></div>
-	<!-- footer -->
-	<footer class="footer"></footer>
-
-	<!-- chargement des scripts -->
-	<!-- constantes globales -->
-	<script src="/constantes/constantes.module.js"></script>
-	<script src="/constantes/errors.js"></script>
-	<!-- services globaux -->
-	<!-- services globaux : auth -->
-	<script src="/services/authentication/auth.module.js"></script>
-	<script src="/services/authentication/auth.service.js"></script>
-	<!-- services globaux : proxy -->
-	<script src="/services/proxy/proxy.module.js"></script>
-	<script src="/services/proxy/User.js"></script>
-	<!-- services globaux : commons -->
-	<script src="/services/commons/commons.module.js"></script>
-	<script src="/services/commons/array.utils.js"></script>
-	<script src="/services/commons/reader.utils.js"></script>
-
-	<script src="/services/services.module.js"></script>
-
-	<!-- header -->
-	<script src="/components/header/header.module.js"></script>
-	<script src="/components/header/header.route.js"></script>
-	<!-- header > menu -->
-	<script src="/components/header/menu/menu.js"></script>
-	<!-- footer -->
-	<script src="/components/footer/footer.module.js"></script>
-	<script src="/components/footer/footer.route.js"></script>
-	<!-- about -->
-	<script src="/components/about/about.module.js"></script>
-	<script src="/components/about/about.route.js"></script>
-	<!-- error -->
-	<script src="/components/error/error.module.js"></script>
-	<script src="/components/error/error.route.js"></script>
-	<script src="/components/error/error.js"></script>
-	<!-- login -->
-	<script src="/components/login/login.module.js"></script>
-	<script src="/components/login/login.service.js"></script>
-	<script src="/components/login/login.route.js"></script>
-	<script src="/components/login/login.js"></script>
-	<!-- home -->
-	<script src="/components/home/home.module.js"></script>
-	<script src="/components/home/home.route.js"></script>
-	<script src="/components/home/home.js"></script>
-	<!-- home > partial1 -->
-	<script src="/components/home/partial1/partial1.route.js"></script>
-	<script src="/components/home/partial1/partial1.js"></script>
-	<!-- contacts -->
-	<script src="/components/contacts/contacts.module.js"></script>
-	<script src="/components/contacts/contacts.route.js"></script>
-	<script src="/components/contacts/contacts.js"></script>
-	<!-- contacts -->
-	<script src="/components/contacts/contacts.module.js"></script>
-	<script src="/components/contacts/contacts.route.js"></script>
-	<script src="/components/contacts/contacts.service.js"></script>
-	<script src="/components/contacts/contacts.contenu.js"></script>
-	<script src="/components/contacts/contacts.js"></script>
-	<!-- contacts > liste -->
-	<script src="/components/contacts/liste/liste.route.js"></script>
-	<!-- contacts > detail -->
-	<script src="/components/contacts/detail/detail.route.js"></script>
-	<script src="/components/contacts/detail/detail.js"></script>
-	<!-- dashboard -->
-	<script src="/components/dashboard/dashboard.module.js"></script>
-	<script src="/components/dashboard/dashboard.route.js"></script>
-	<script src="/components/dashboard/dashboard.js"></script>
-	<script src="/components/dashboard/dashboard.contenu.js"></script>
-	<script src="/components/dashboard/dashboard.service.js"></script>
-	<!-- dashboard > side menu -->
-	<script src="/components/dashboard/sidemenu/sidemenu.js"></script>
-	<!-- chargement des modules -->
-	<script src="modules.js"></script>
-	<!-- script principal -->
-	<script src="main.js"></script>
-</body>
+		<!-- scripts -->
+		<script src="/js/app.js"></script>
+		<!-- templates html en cache angular -->
+		<script src="/html/templates.js"></script>
+	</body>
 </html>

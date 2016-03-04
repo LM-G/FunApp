@@ -114,7 +114,7 @@ gulp.task('publish-html', function () {
 // copie l'index html
 gulp.task('publish-entrypoint', function() {
   return gulp
-  	.src('app/index-gulp.html')
+  	.src('app/index.html')
   	.pipe(rename('index.html'))
     .pipe(gulp.dest(PATH_DIST));
 });
