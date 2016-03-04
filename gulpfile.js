@@ -11,6 +11,7 @@ var mainBowerFiles = require('main-bower-files'); // a delete
 var angularFilesort = require('gulp-angular-filesort');
 var filter = require('gulp-filter'); // a delete
 var templateCache = require('gulp-angular-templatecache');
+var livereload = require('gulp-livereload');
 
 // Variables =====================================================================================
 
@@ -53,7 +54,8 @@ gulp.task('publish-bower-components', function() {
   	.src(bower_components)
     .pipe(concat('libs.js'))
     .pipe(uglify())
-    .pipe(gulp.dest(PATH_DIST_JS));
+    .pipe(gulp.dest(PATH_DIST_JS))
+    .pipe(livereload());
 });
 
 // concaténation des scripts
@@ -62,16 +64,10 @@ gulp.task('publish-components', function(){
   	.src(PATH_SCRIPTS)
   	.pipe(wrap('(function(){\n\'use strict\';\n<%= contents %>\n})();'))
   	.pipe(angularFilesort())
+  	.pipe(ngAnnotate())
     .pipe(concat('app.js'))
-    .pipe(gulp.dest(PATH_DIST_JS));
-});
-
-// gestion des injections de dépendance
-gulp.task('injections', function () {
-  return gulp
-  	.src(PATH_DIST_JS + 'app.js')
-    .pipe(ngAnnotate())
-    .pipe(gulp.dest(PATH_DIST_JS));
+    .pipe(gulp.dest(PATH_DIST_JS))
+    .pipe(livereload());
 });
 
 // ajoute les IIFE
@@ -95,7 +91,8 @@ gulp.task('publish-css', function () {
   return gulp
   	.src(cssFiles)
     .pipe(concat('styles.css'))
-    .pipe(gulp.dest(PATH_DIST_CSS));
+    .pipe(gulp.dest(PATH_DIST_CSS))
+    .pipe(livereload());
 });
 
 // copie les templates html
@@ -108,7 +105,8 @@ gulp.task('publish-html', function () {
   return gulp
    	.src(PATH_HTML)
     .pipe(templateCache(cacheOptions))
-    .pipe(gulp.dest(PATH_DIST_HTML));
+    .pipe(gulp.dest(PATH_DIST_HTML))
+    .pipe(livereload());
 });
 
 // copie l'index html
@@ -116,14 +114,16 @@ gulp.task('publish-entrypoint', function() {
   return gulp
   	.src('app/index.html')
   	.pipe(rename('index.html'))
-    .pipe(gulp.dest(PATH_DIST));
+    .pipe(gulp.dest(PATH_DIST))
+    .pipe(livereload());
 });
 
 // copie du l'htaccess
 gulp.task('publish-htaccess', function() {
   return gulp
   	.src('.htaccess')
-    .pipe(gulp.dest(PATH_DIST));
+    .pipe(gulp.dest(PATH_DIST))
+    .pipe(livereload());
 });
 
 // traductions i18n angular
@@ -133,27 +133,41 @@ gulp.task('publish-i18n-lang', function() {
       'bower_components/angular-i18n/angular-locale_fr*.js',
       'bower_components/angular-i18n/angular-locale_en*.js'
     ])
-    .pipe(gulp.dest(PATH_DIST_LANG + '/i18n/'));
+    .pipe(gulp.dest(PATH_DIST_LANG + '/i18n/'))
+    .pipe(livereload());
 });
 
 // traductions
 gulp.task('publish-lang', function() {
   return gulp
   	.src('app/assets/lang/locale*.json')
-    .pipe(gulp.dest(PATH_DIST_LANG));
+    .pipe(gulp.dest(PATH_DIST_LANG))
+    .pipe(livereload());
 });
 
-// traductions
+// mocks des données
 gulp.task('mocks', function() {
   return gulp
   	.src('app/assets/mock/*.json')
-    .pipe(gulp.dest('dist/mock/'));
+    .pipe(gulp.dest('dist/mock/'))
+    .pipe(livereload());
 });
 
 // images
 gulp.task('publish-images', function() {
   return gulp.src('app/assets/img/**')
-    .pipe(gulp.dest(PATH_DIST_IMG));
+    .pipe(gulp.dest(PATH_DIST_IMG))
+    .pipe(livereload());
+});
+
+// Recompile automatiquement si changement sur un fichier
+gulp.task('watch', function() {
+	livereload.listen();
+  gulp.watch('app/**/*.js', ['publish-components']);
+  gulp.watch('app/**/*.css', ['publish-css']);
+  gulp.watch('app/**/*.html', ['publish-html', 'publish-entrypoint']);
+  gulp.watch('app/assets/img/**', ['publish-images']);
+  gulp.watch('app/assets/lang/**', ['publish-lang']);
 });
 
 // Tâche par défaut
@@ -170,7 +184,7 @@ gulp.task('default',
 			'publish-i18n-lang',
 			'publish-lang'
 		],
-		'injections',
-		'mocks'
+		'mocks',
+		'watch'
 	)
 );
