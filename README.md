@@ -1,12 +1,25 @@
+# FunAPP
+
 #Installation :
 
-##1 - ```bash
+##1 - Modules Node 
+
+```bash
 $ npm install
 ```
-##2 - ```bash
+
+##2 - Librairies bower
+
+```bash
 $ bower install
 ```
-##3 - ```bash
+
+##3 - Génération du dossier /dist
+
+```bash
 $ gulp
 ```
-##4 - Faire pointer un serveur Apache sur le dossier /dist généré
+
+##4
+
+Faire pointer un serveur Apache sur le dossier /dist généré
