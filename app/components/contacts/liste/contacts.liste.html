@@ -5,14 +5,16 @@
 <br>
 <div class="row">
 	<div class="col-sm-3">
-		<input class="form-control" type="text" ng-model="searchBox" placeholder="{{ 'global.searchBox.placeholder' | translate }}">
+		<input class="form-control" type="text"
+			placeholder="{{ 'global.searchBox.placeholder' | translate }}"
+			ng-model="searchBox">
 	</div>
 </div>
 <br>
 <div class="row">
 	<ul class="animated fadeIn">
-	    <li ng-repeat="person in contacts.getListe() | filter : searchBox track by person.id">
-	        <a ng-href="/contacts/{{person.id}}" ng-bind="person.name"></a>
-	    </li>
+    <li ng-repeat="person in contacts.getListe() | filter : searchBox track by person.id">
+        <a ng-href="/contacts/{{person.id}}" ng-bind="person.name"></a>
+    </li>
 	</ul>
 </div>
