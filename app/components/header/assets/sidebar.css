@@ -1,0 +1,38 @@
+/* navbar */
+
+@media (min-width: 768px) {
+  .sidebar {
+    z-index: 1000;
+    position: absolute;
+    width: 250px;
+    margin-top: 52px;
+  }
+}
+
+.sidebar.navbar-collapse {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+@media (min-width: 768px) {
+  .sidebar {
+    z-index: 1000;
+    position: absolute;
+    width: 250px;
+    margin-top: 52px;
+    border-radius: 0px;
+  }
+}
+
+.sidebar.navbar-collapse {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.sidebar ul li {
+  border-bottom: 1px solid #e7e7e7;
+}
+.nav>li {
+  position: relative;
+  display: block;
+}

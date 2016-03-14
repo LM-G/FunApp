@@ -11,12 +11,15 @@
 			<script src="/js/libs.js"></script>
 	</head>
 	<body>
-		<!-- menu -->
-		<header class="header"></header>
-		<!-- contenu de la page -->
-		<div ui-view></div>
-		<!-- footer -->
-		<footer class="footer"></footer>
+		<div id="wrapper">
+			<!-- menu -->
+			<header class="header"></header>
+			<!-- contenu de la page -->
+			<div id="page-wrapper" ui-view></div>
+			<!-- footer -->
+			<footer class="footer"></footer>
+		</div>
+		
 
 		<!-- scripts -->
 		<script src="/js/app.js"></script>
