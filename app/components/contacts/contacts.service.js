@@ -11,15 +11,15 @@ function contactsService($http, $q) {
 	function getContacts(){
 		return $http.get( '/mock/contacts.json', {cache:true})
 			.then(getContactsOK)
-      .catch(getContactsKO);
+            .catch(getContactsKO);
 
-    function getContactsOK(response){
-    	return response.data;
-    }
+        function getContactsOK(response){
+        	return response.data;
+        }
 
-    function getContactsKO(error){
-    	console.error('XHR Failed for getContacts.' + error.data);
-    }
+        function getContactsKO(error){
+        	console.error('XHR Failed for getContacts.' + error.data);
+        }
 	}
 
 	function getContact(id){

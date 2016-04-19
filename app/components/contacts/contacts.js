@@ -9,10 +9,10 @@ function contactsCtrl($scope, $state, contactsContenu, contactsService, listeCon
 	
 	contacts.getListe = contactsContenu.getListeContacts;
 
-    /* Listeners */
-    $scope.$on('$destroy', function(){
-    	console.log('controller contacts detruit');
-    })
+  /* Listeners */
+  $scope.$on('$destroy', function(){
+  	console.log('controller contacts detruit');
+  })
 	
 	/* Exécution */
 	contactsContenu.setListeContacts(listeContacts);
